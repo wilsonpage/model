@@ -1,0 +1,24 @@
+{
+  "name": "model",
+  "version": "0.0.0",
+  "description": "A super light model",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wilsonpage/model.git"
+  },
+  "keywords": [
+    "model"
+  ],
+  "author": "Wilson Page",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "ef12b4cdd358fd5dfcab16a3328dfacf9e636027",
+  "dependencies": {
+    "utils": "git://github.com/wilsonpage/utils.git",
+    "event": "git://github.com/wilsonpage/event.git"
+  }
+}
