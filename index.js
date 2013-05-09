@@ -17,6 +17,12 @@ var mixin = require('utils').mixin;
 module.exports = Model;
 
 /**
+ * Locals
+ */
+
+var proto = Model.prototype;
+
+/**
  * Model constructor.
  *
  * @constructor
@@ -37,7 +43,7 @@ function Model(data) {
  * @return {*}
  * @api public
  */
-Model.prototype.get = function(key) {
+proto.get = function(key) {
   return key
     ? this._data[key]
     : this._data;
@@ -52,7 +58,7 @@ Model.prototype.get = function(key) {
  * @param {String|Object} key
  * @param {*|undefined} value
  */
-Model.prototype.set = function(data, value) {
+proto.set = function(data, value) {
 
   // If a string key is passed
   // with a value. Set the value
@@ -81,7 +87,7 @@ Model.prototype.set = function(data, value) {
  *
  * @return {Model}
  */
-Model.prototype.clear = function() {
+proto.clear = function() {
   this._data = {};
   this.fire('change');
 
@@ -94,7 +100,7 @@ Model.prototype.clear = function() {
  *
  * @return {undefined}
  */
-Model.prototype.destroy = function() {
+proto.destroy = function() {
   for (var key in this._data) this._data[key] = null;
   delete this._data;
   this.fire('destroy');
@@ -106,9 +112,9 @@ Model.prototype.destroy = function() {
  *
  * @return {Object}
  */
-Model.prototype.toJSON = function() {
+proto.toJSON = function() {
   return mixin({}, this._data);
 };
 
 // Mixin events
-events(Model.prototype);
+events(proto);
