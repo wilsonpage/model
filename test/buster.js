@@ -1,6 +1,5 @@
-var config = module.exports;
 
-config["fruitmachine"] = {
+module.exports["model"] = {
     rootPath: '../',
     environment: "browser",
     sources: [
