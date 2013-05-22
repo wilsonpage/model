@@ -1,6 +1,4 @@
 
-/*jshint browser:true, node:true*/
-
 'use strict';
 
 /**
@@ -8,7 +6,7 @@
  */
 
 var events = require('event');
-var mixin = require('utils').mixin;
+var mixin = require('mixin');
 
 /**
  * Exports

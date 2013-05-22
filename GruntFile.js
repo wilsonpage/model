@@ -7,20 +7,17 @@ module.exports = function(grunt) {
     browserify: {
       build: {
         src: 'index.js',
-        dest: 'build/<%= pkg.title %>.js',
-        options: {
-          standalone: '<%= pkg.title %>'
-        }
+        dest: 'build/<%= pkg.name %>.js'
+      },
+      options: {
+        standalone: '<%= pkg.title %>'
       }
     },
 
     uglify: {
-      options: {
-        banner: '/*! <%= pkg.title %> <%= pkg.version %> */\n'
-      },
       build: {
-        src: 'build/<%= pkg.title %>.js',
-        dest: 'build/<%= pkg.title %>.min.js'
+        src: 'build/<%= pkg.name %>.js',
+        dest: 'build/<%= pkg.name %>.min.js'
       }
     }
   });
