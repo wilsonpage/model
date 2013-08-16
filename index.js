@@ -42,7 +42,7 @@ function Model(data) {
  * @api public
  */
 proto.get = function(key) {
-  return key
+  return key !== undefined && key !== false
     ? this._data[key]
     : this._data;
 };
