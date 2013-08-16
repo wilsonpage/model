@@ -15,7 +15,7 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "scripts": {
-    "test": "./node_modules/.bin/grunt buster"
+    "test": "./node_modules/.bin/grunt && ./node_modules/.bin/grunt buster"
   },
   "gitHead": "ef12b4cdd358fd5dfcab16a3328dfacf9e636027",
   "dependencies": {

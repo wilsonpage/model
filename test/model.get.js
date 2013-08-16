@@ -24,5 +24,14 @@ buster.testCase('Model#get()', {
     var result = model.get();
 
     assert.equals(result, data);
+  },
+
+  "Should return the objects value even when the key is numeric, particularly the falsey value '0'": function() {
+    var data = { 0: 'foo', 1: 'bar' };
+    var model = new Model(data);
+
+    assert.equals(model.get(0), 'foo');
+    assert.equals(model.get(1), 'bar');
   }
+
 });
